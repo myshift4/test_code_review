@@ -31,8 +31,8 @@ inputs:
     required: false
     default: 'files'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: 'bash'
+  image: 'entrypoint.sh'
   args:
     - ${{ inputs.openai_api_key }}
     - ${{ inputs.github_token }}
