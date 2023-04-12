@@ -9,9 +9,9 @@ RUN pip install -r requirements.txt
 COPY entrypoint.sh /entrypoint.sh
 COPY main.py /main.py
 
-RUN apt-get install curl -y
 RUN chmod 777 /main.py
 RUN chmod 777 /entrypoint.sh
+RUN apt-get update && apt-get install -y ngnix
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
