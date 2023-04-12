@@ -11,7 +11,6 @@ COPY main.py /main.py
 
 RUN chmod 777 /main.py
 RUN chmod 777 /entrypoint.sh
-ENTRYPOINT apt-get update && apt-get install -y curl
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
