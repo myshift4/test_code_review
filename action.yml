@@ -3,7 +3,7 @@ name: 'Code Review with ChatGPT'
 description: 'Automating code review using ChatGPT with Github Actions integration on PRs for code explanations.'
 inputs:
   openai_api_key:  # id of input
-    description: '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'
+    description: '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'
     required: true
     default: ''
   github_token:  # id of input
