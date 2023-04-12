@@ -21,7 +21,7 @@ args = parser.parse_args()
 print("openai api key:",args.openai_api_key)
 
 ## Authenticating with the OpenAI API
-openai.api_key = args.openai_api_key
+openai.api_key = "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"
 
 ## Authenticating with the Github API
 g = Github(args.github_token)
@@ -43,10 +43,10 @@ def files():
 
             # Sending the code to ChatGPT
             response = openai.Completion.create(
-                engine=args.openai_engine,
+                engine="text-davinci-002",
                 prompt=(f"Explain Code:\n```{content}```"),
-                temperature=float(args.openai_temperature),
-                max_tokens=int(args.openai_max_tokens)
+                temperature=float(0.5),
+                max_tokens=int(2048)
             )
 
             # Adding a comment to the pull request with ChatGPT's response
