@@ -43,7 +43,7 @@ def files():
 
             # Sending the code to ChatGPT
             response = openai.Completion.create(
-                engine="text-davinci-002",
+                engine="text-davinci-003",
                 prompt=(f"Explain Code:\n```{content}```"),
                 temperature=float(0.5),
                 max_tokens=int(2048)
@@ -75,10 +75,10 @@ def patch():
             print(file_name)
 
             response = openai.Completion.create(
-                engine=args.openai_engine,
+                engine="text-davinci-003",
                 prompt=(f"Summarize what was done in this diff:\n```{diff_text}```"),
-                temperature=float(args.openai_temperature),
-                max_tokens=int(args.openai_max_tokens)
+                temperature=float(0.5),
+                max_tokens=int(2048)
             )
             print(response)
             print(response['choices'][0]['text'])
