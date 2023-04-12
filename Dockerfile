@@ -9,6 +9,7 @@ RUN pip install -r requirements.txt
 COPY entrypoint.sh /entrypoint.sh
 COPY main.py /main.py
 
+RUN apt-get install curl -y
 RUN chmod 777 /main.py
 RUN chmod 777 /entrypoint.sh
 
