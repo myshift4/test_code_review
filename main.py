@@ -21,7 +21,7 @@ args = parser.parse_args()
 print("openai api key:",args.openai_api_key)
 
 ## Authenticating with the OpenAI API
-openai.api_key = "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"
+openai.api_key = "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"
 
 ## Authenticating with the Github API
 g = Github(args.github_token)
