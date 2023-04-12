@@ -18,6 +18,8 @@ parser.add_argument('--openai_max_tokens', default=2048, help='The maximum numbe
 parser.add_argument('--mode', default="files", help='PR interpretation form. Options: files, patch')
 args = parser.parse_args()
 
+print("openai api key:",args.openai_api_key)
+
 ## Authenticating with the OpenAI API
 openai.api_key = args.openai_api_key
 
