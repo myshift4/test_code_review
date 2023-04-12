@@ -9,5 +9,8 @@ RUN pip install -r requirements.txt
 COPY entrypoint.sh /entrypoint.sh
 COPY main.py /main.py
 
+RUN chmod 777 /main.py
+RUN chmod 777 /entrypoint.sh
+
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
