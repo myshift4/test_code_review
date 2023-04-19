@@ -13,6 +13,5 @@ def get_ck_execute(run_sql):
 
 print('aaaaaaaa')
 print('bbbbbbbb')
-print('ccccccc')
-print('dddddd')
+
 
