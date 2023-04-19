@@ -11,4 +11,6 @@ def get_ck_execute(run_sql):
     result = ck_conn.execute(run_sql)
     return result
 
+print('aaaaaaaa')
 print('ccccccc')
+
